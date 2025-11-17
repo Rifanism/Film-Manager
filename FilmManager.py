@@ -41,11 +41,12 @@ class FilmManager:
             print(film)
     
     def byGenre(self, genres: list[str]):
-        for title in self.db:
+        db = self.db
+        for title in db:
             for genre in genres:
-                if genre in self.db[title]['genre']:
-                    print(f'{title} | {', '.join(self.db[title]['genre'])} | {self.db[title]['rating']}')
+                if genre in db[title]['genre']:
+                    print(f'{title} ({db[title]['year']}) | {', '.join(db[title]['genre'])} | {db[title]['rating']}')
 
 if __name__ == '__main__':
     f = FilmManager()
-    f.byGenre(['Romance'])
+    f.byGenre(['Horror', 'Action'])
