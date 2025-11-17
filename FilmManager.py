@@ -46,7 +46,38 @@ class FilmManager:
             for genre in genres:
                 if genre in db[title]['genre']:
                     print(f'{title} ({db[title]['year']}) | {', '.join(db[title]['genre'])} | {db[title]['rating']}')
+    
+    def byRating(self):
+        db = self.db
+        keys = list(db.keys())
+
+        def getValue(key):
+            return (-float(db[key]['rating']))
+        
+        def partition(low, high):
+            pivotKey = keys[high]
+            pivotValue = getValue(pivotKey)
+
+            i = low - 1
+
+            for j in range(low, high):
+                currentValue = getValue(keys[j])
+                if currentValue < pivotValue:
+                    i = i + 1
+                    keys[i], keys[j] = keys[j], keys[i]
+            
+            keys[i + 1], keys[high] = keys[high], keys[i + 1]
+            return i + 1
+        
+        def recursive(low, high):
+            if low < high:
+                pivot = partition(low, high)
+                recursive(low, pivot - 1)
+                recursive(pivot + 1, high)
+        
+        size = len(keys)
+        recursive(0, size - 1)
+        return keys
 
 if __name__ == '__main__':
     f = FilmManager()
-    f.byGenre(['Horror', 'Action'])
