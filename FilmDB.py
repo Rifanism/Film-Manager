@@ -23,5 +23,3 @@ def filmDB(db):
 
 if __name__ == '__main__':
     myDB = filmDB('database\\films.db')
-    for title in myDB:
-        print(title, myDB[title]['rating'])
