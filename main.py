@@ -130,21 +130,7 @@ while True:
         break
 
     # ------ HOME PAGE ------ (Dila yang buat)
-    if current_page == 'home':
-        if event == 'Display Films':
-            window.close()
-            window = qt.Window('Film Manager', display(), size=(550, 400))
-            current_page = 'display'
-
-        elif event == 'Add New Film':
-            window.close()
-            window = qt.Window('Film Manager', newFilm(), size=(550, 400))
-            current_page = 'add film'
-        
-        elif event == 'Delete Film':
-            window.close()
-            window = qt.Window('Film Manager', deleteFilm(), size=(550, 400))
-            current_page = 'delete film'
+    
         elif event == 'Change Rating':
             window.close()
             window = qt.Window('Film Manager', changeRating(), size=(550, 400))
