@@ -9,7 +9,7 @@ Film Manager menghadirkan fitur-fitur utama, yaitu:
 - Update rating
 - Get recommendations (by genre)
 
-# Data Structures & Algorithm
+## Data Structures & Algorithm
 
 Kami menggunakan beberapa struktur data di aplikasi ini, yaitu:
 
@@ -17,7 +17,7 @@ Kami menggunakan beberapa struktur data di aplikasi ini, yaitu:
 2. Array (List), untuk mengelola film.
 3. Quick Sort, untuk mengurutkan list film berdasarkan rating tertinggi.
 
-# Systems
+## Systems
 Pada aplikasi Film Manager ini, kami menggunakan **Shelve** untuk _database_ dan **PySimpleGuiQt** untuk _GUI_.
 ___
 **Kenapa lebih memilih _PySimpleGui_?**
@@ -30,13 +30,13 @@ ___
 _**Shelve**_ adalah library untuk mengelola database (.db) yang mudah digunakan dan berbasis **Hashmap/Hash Table**, karena itu kami memmilih ini. Dengan struktur data **Hashmap**, maka untuk sistem pencarian akan mudah dan cepat karena memiliki kompleksitas O(1).
 
 
-## Installation
+### Installation
 
 ```bash
 python -m pip install PySimpleGUIQt
 ```
 
-## Import
+### Import
 ```python
 import PySimpleGuiQt as qt
 import shelve
