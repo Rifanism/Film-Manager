@@ -9,6 +9,14 @@ Film Manager menghadirkan fitur-fitur utama, yaitu:
 - Update rating
 - Get recommendations (by genre)
 
+# Data Structures & Algorithm
+
+Kami menggunakan beberapa struktur data di aplikasi ini, yaitu:
+
+1. Hashmap/Hash Table, untuk menyimpan data film.
+2. Array (List), untuk mengelola film.
+3. Quick Sort, untuk mengurutkan list film berdasarkan rating tertinggi.
+
 # Systems
 Pada aplikasi Film Manager ini, kami menggunakan **Shelve** untuk _database_ dan **PySimpleGuiQt** untuk _GUI_.
 ___
